@@ -146,6 +146,3 @@ def send_mail():
     print(f"Emails sent : {c}")
 
 scheduler.add_job(send_mail, 'interval', seconds=5)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=5000)
