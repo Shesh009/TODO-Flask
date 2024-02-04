@@ -145,4 +145,4 @@ def send_mail():
         print(f"Error in sending mail\n{e}")
     print(f"Emails sent : {c}")
 
-scheduler.add_job(send_mail, 'interval', hours=6)
+scheduler.add_job(send_mail, 'interval', hours=3)
