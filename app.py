@@ -7,7 +7,6 @@ from collections import defaultdict
 from apscheduler.schedulers.background import BackgroundScheduler
 
 scheduler = BackgroundScheduler()
-scheduler.start()
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -146,3 +145,4 @@ def send_mail():
     print(f"Emails sent : {c}")
 
 scheduler.add_job(send_mail, 'interval', seconds=30)
+scheduler.start()
