@@ -9,6 +9,7 @@ This project is a web-based ToDo list application designed to help users manage 
 - [Technologies Used](#technologies-used)
 - [Implementation](#implementation)
 - [Features](#features)
+- [Deployment](#deployment)
 - [Conclusion](#conclusion)
 - [Acknowledgement](#acknowledgement)
 - [Contact](#contact)
@@ -63,6 +64,12 @@ The application leverages Flask for web development, MySQL for data storage, and
 - Task categorization and deadline tracking.
 - Email notifications for task reminders.
 - User-friendly interface.
+
+## Deployment
+
+The application is deployed on Render, making it accessible online for users to manage their tasks from anywhere.
+
+[Live Application](https://todo-app-piw1.onrender.com)  <!-- Replace with the actual URL -->
 
 ## Conclusion
 
