@@ -57,27 +57,6 @@ def home():
             query = f"DELETE FROM TODO WHERE DEADLINE = '{i[2]}'"
             execute_query(query)
     data=execute_query(query,fetchall=True)
-    # time=datetime.now().strftime("%H:%M")
-    # for i in data:
-    #     l=""
-    #     if (datetime.strptime(i[2], '%Y-%m-%d')-datetime.today()).days==4 and i[3]==0 and i[5]==0:
-    #         query=f"UPDATE TODO SET EMAIL_SENT=1 where (TASK='{i[1]}' and ((DATEDIFF('{i[2]}',SYSDATE())-1)=4 or (DATEDIFF('{i[2]}',SYSDATE())-2)=4))";
-    #         execute_query(query,fetchall=True)
-    #         l+=i[1]+"->"+i[2]+"\n"
-    #         d[i[4]].append(l)
-    #         print(l)
-    # print(d)
-    # c=0
-    # try:
-    #     for i,j in d.items():
-    #         j=",".join(j)
-    #         if j!='':
-    #             send_email("Tasks to be completed in 4 days",i,j)
-    #             c+=1
-    # except:
-    #     print("Error in sending mail")
-    # print(f"Emails sent : {c}")
-    
     query = "SELECT DATE_FORMAT(CREATED, '%d %b %Y'),TASK,DATE_FORMAT(DEADLINE,'%d %b %Y'),COMPLETED FROM TODO ORDER BY DEADLINE"
     data = execute_query(query, fetchall=True)
     return render_template("index.html" ,data=data)
